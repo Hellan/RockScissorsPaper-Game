@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="rspGame.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title> Rock, Paper, Scissors </title>
+</head>
+
+<body>
+    <div class="col-md-6"> </div>
+    <div class=" col-md-5 " id="gameWrap">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="mainHeading">Rock, Paper, Scissors </h1>
+                <h2 id="msgHeading">Who will be the winner? </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="userWrap">
+                <label for="userInput" id="userInputLbl">Enter Your Choice: </label>
+                <input type="text" name="userInput" id="userInput" />
+            </div>
+            <div class="col-md-6" id="cpuWrap">
+                <label for="cpuResult" id="cpuResultLbl">The Computer Chooses: </label>
+                <span id="cpuResult"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="goBtn">GO!</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+        <!-- <div class="col-md-1">
+            </div> -->
+        <div class="col-md-2" id="counter">
+            <span id="countWins">   </span> </br>
+            <span id="countLoses">  </span>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-3" id="hiddenRock"> <img src="rock.jpg"> </div>
+        <div class="col-md-3" id="hiddenPaper"> <img src="paper.jpg"> </div>
+        <div class="col-md-3" id="hiddenScissors"> <img src="scissors.jpg"> </div>
+    </div>
+    <script src="bootstrap.min.js"></script>
+    <script src="rspGame.js"></script>
+</body>
+
+</html>
