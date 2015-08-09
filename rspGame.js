@@ -9,7 +9,8 @@ document.getElementById('goBtn').onclick = function playTheGame() {
         msgHeading = document.getElementById('msgHeading'),
         mainHeading = document.getElementById('mainHeading'),
         randomize = Math.random() * 100,
-        cpuChoice;
+        cpuChoice,
+        countBadges = 0;
 
 
     $("#mainHeading").text("Rock, Paper, Scissors ");
@@ -29,7 +30,7 @@ document.getElementById('goBtn').onclick = function playTheGame() {
 
         if (userInput === cpuChoice) {
             msgHeading.innerHTML = "It's a Tie. Try Again!";
-            msgHeading.style.color = "white";
+            msgHeading.style.color = "grey";
         }
 
 
@@ -46,6 +47,10 @@ document.getElementById('goBtn').onclick = function playTheGame() {
             countWins.innerHTML = "Times you won: " + countWinsS;
             msgHeading.style.color = "green";
             $('#hiddenRock').show();
+            countBadges++;
+            if (countBadges === 1){
+                 $('.hiddenText').show();
+            }
         }
 
         if (userInput === "Paper" && cpuChoice === "Rock") {
@@ -54,6 +59,10 @@ document.getElementById('goBtn').onclick = function playTheGame() {
             countWins.innerHTML = "Times you won: " + countWinsS;
             msgHeading.style.color = "green";
             $('#hiddenPaper').show();
+            countBadges++;
+            if (countBadges === 1){
+                 $('.hiddenText').show();
+            }
         } else if (userInput === "Paper" && cpuChoice === "Scissors") {
             msgHeading.innerHTML = "Scissors cut Paper. You Loose!";
             countLosesS++;
@@ -74,6 +83,10 @@ document.getElementById('goBtn').onclick = function playTheGame() {
             countWins.innerHTML = "Times you won: " + countWinsS;
             msgHeading.style.color = "green";
             $('#hiddenScissors').show();
+            countBadges++;
+            if (countBadges === 1){
+                 $('.hiddenText').show();
+            }
 
         }
     } else {

@@ -10,44 +10,54 @@
 </head>
 
 <body>
-    <div class="col-md-6"> </div>
-    <div class=" col-md-5 " id="gameWrap">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1 id="mainHeading">Rock, Paper, Scissors </h1>
-                <h2 id="msgHeading">Who will be the winner? </h2>
+            <div class="col-md-6">
+                <img src="rspGame.jpg" class="img-responsive">
+            </div>
+            <div class=" col-md-5 " id="gameWrap">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="mainHeading">Rock, Paper, Scissors </h1>
+                        <h2 id="msgHeading">Who will be the winner? </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="userWrap">
+                        <label for="userInput" id="userInputLbl">Enter Your Choice: </label>
+                        <input type="text" name="userInput" id="userInput" />
+                    </div>
+                    <div class="col-md-6" id="cpuWrap">
+                        <label for="cpuResult" id="cpuResultLbl">The Computer Chooses: </label>
+                        <span id="cpuResult"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="goBtn">GO!</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6" id="userWrap">
-                <label for="userInput" id="userInputLbl">Enter Your Choice: </label>
-                <input type="text" name="userInput" id="userInput" />
+            <div class="col-md-8">
             </div>
-            <div class="col-md-6" id="cpuWrap">
-                <label for="cpuResult" id="cpuResultLbl">The Computer Chooses: </label>
-                <span id="cpuResult"></span>
+            <div class="col-md-2" id="counter">
+                <p> Results Board </p>
+                <span id="countWins">   </span> </br>
+                <span id="countLoses">  </span>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <button id="goBtn">GO!</button>
+            <div class="col-md-12 hiddenText">
+                <h4> Badges: </h4>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-4" id="hiddenRock"> <img src="rock.jpg" class="img-responsive img-rounded"> </div>
+            <div class="col-md-4" id="hiddenPaper"> <img src="paper.jpg" class="img-responsive img-rounded"> </div>
+            <div class="col-md-4" id="hiddenScissors"> <img src="scissors.jpg" class="img-responsive img-rounded"> </div>
         </div>
-        <!-- <div class="col-md-1">
-            </div> -->
-        <div class="col-md-2" id="counter">
-            <span id="countWins">   </span> </br>
-            <span id="countLoses">  </span>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="col-md-3" id="hiddenRock"> <img src="rock.jpg"> </div>
-        <div class="col-md-3" id="hiddenPaper"> <img src="paper.jpg"> </div>
-        <div class="col-md-3" id="hiddenScissors"> <img src="scissors.jpg"> </div>
     </div>
     <script src="bootstrap.min.js"></script>
     <script src="rspGame.js"></script>
